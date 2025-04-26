@@ -25,7 +25,7 @@ public class BankService {
         }
 
         fromAccount.setBalance(fromAccount.getBalance() - amount);
-        toAccount.setBalance(toAccount.getBalance() + amount);
+        toAccount.setBalance(toAccount.getBalance() - amount + amount);
 
         accountRepository.save(fromAccount);
         accountRepository.save(toAccount);
